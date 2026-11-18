@@ -146,6 +146,39 @@ footer{border-top:1px solid var(--rule);padding-top:18px;font-size:13px;color:va
   background:var(--surface);border:1px solid var(--rule);color:var(--muted);
   width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1}
 .theme:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── spacing (≈75%) + unified type ── */
+body{line-height:1.55}
+.wrap{max-width:1240px;padding-bottom:64px;gap:clamp(28px,4vw,56px)}
+@media (min-width:880px){.wrap{grid-template-columns:236px 1fr;padding-top:56px}}
+section{margin-bottom:32px}
+h2{margin:0 0 12px;padding-bottom:7px}
+/* one text size everywhere in the main column: 15.5px (same as About body) */
+.lede,p.body{font-size:15.5px;font-weight:400;color:var(--muted);line-height:1.6;margin:0 0 12px;max-width:40em}
+.what h3,.what .sub,
+.pub .title,.pub .authors,.pub .note,
+.flat li,.flat .d,
+.skill .v{font-size:15.5px;line-height:1.5;letter-spacing:0}
+.what h3,.pub .title{font-weight:600}
+.entry{padding:8px 0}
+.what h3{margin:0 0 2px}
+.pubgroup{margin-bottom:18px}
+.pubgroup > h3{margin:0 0 2px}
+.pub{padding:9px 0}
+.pub .title{margin:0 0 3px}
+.pub .note{display:inline-block;margin:3px 0 0}
+.pub .refs{display:inline-flex;margin:0 0 0 12px;vertical-align:baseline}
+.flat li{padding:7px 0}
+.flat .d{margin-top:1px}
+.skill{padding:7px 0}
+.rlede{margin:0 0 18px}
+.rgrid{gap:26px 30px}
+.rfig{margin-bottom:10px}
+.rfig img{max-height:210px;width:100%;object-fit:contain}
+.rcard p.rd{margin:0 0 8px}
+.rcard li{padding:6px 0}
+footer{padding-top:14px}
+#about-body p{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -336,7 +369,6 @@ const CV = {
       fig: `<img src="${FIG3}" alt="">`,
       items: [
         { t: "ReCon", s: "Structure-informed scoring of biomolecular complexes, applied to antibody–antigen models · NeurIPS Workshop 2026" },
-        { t: "CASP17", s: "Protein–ligand structure prediction · SNU-CHEM, equal-contribution member · invited talk 2026" },
       ],
     },
   ],
